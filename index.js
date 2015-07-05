@@ -1,20 +1,20 @@
 var express = require('express');
 var app = express();
 
-app.set('port', (process.env.PORT || 5000));
+app.set('port', (5000));
 
 app.use(express.static(__dirname + '/public'));
 
 // views is directory for all template files
-app.set('views', __dirname + '/views');
-app.set('view engine', 'ejs');
+app.set('views', __dirname + '\view\pages');
+app.set('partials', 'ejs');
 
 app.get('/', function(request, response) {
-  response.render('pages/index')
+  response.render('views\pages\index.ejs')
 });
 
 app.listen(app.get('port'), function() {
-  console.log('Node app is running on port', app.get('port'));
+  console.log('Listening on ', app.get('port'));
 });
 
 
