@@ -2,7 +2,7 @@
 var express = require('express');
 var app = express();
 var pg = require('pg');
-var procces.env.DATABASE_URL = "postgres:///$(whoami)";
+var DATABASE_URL = "postgres:///$(whoami)";
 
 
 app.set('port', (process.env.PORT || 5000));
