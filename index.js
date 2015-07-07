@@ -1,47 +1,34 @@
-var http = require('http');
+
+var express = require('express');
+var app = express();
 var pg = require('pg');
+var DATABASE_URL = "postgres:///$(whoami)";
 
-var conString = "postgres://$(whoami)";
 
-var server = http.createServer(function(req, res) {
+app.set('port', (process.env.PORT || 5000));
 
-  // get a pg client from the connection pool
-  pg.connect(conString, function(err, client, done) {
+app.use(express.static(__dirname + '/public'));
 
-    var handleError = function(err) {
-      // no error occurred, continue with the request
-      if(!err) return false;
+// views is directory for all template files
+app.set('views', __dirname + '/views');
+app.set('view engine', 'ejs');
 
-      // An error occurred, remove the client from the connection pool.
-      // A truthy value passed to done will remove the connection from the pool
-      // instead of simply returning it to be reused.
-      // In this case, if we have successfully received a client (truthy)
-      // then it will be removed from the pool.
-      done(client);
-      res.writeHead(500, {'content-type': 'text/plain'});
-      res.end('An error occurred');
-      return true;
-    };
-
-    // record the visit
-    client.query('INSERT INTO visit (date) VALUES ($1)', [new Date()], function(err, result) {
-
-      // handle an error from the query
-      if(handleError(err)) return;
-
-      // get the total number of visits today (including the current visit)
-      client.query('SELECT COUNT(date) AS count FROM visit', function(err, result) {
-
-        // handle an error from the query
-        if(handleError(err)) return;
-
-        // return the client to the connection pool for other requests to reuse
-        done();
-        res.writeHead(200, {'content-type': 'text/plain'});
-        res.end('You are visitor number ' + result.rows[0].count);
-      });
+app.get('/db', function (request, response) {
+  pg.connect(procces.env.DATABASE_URL, function(err, client, done) {
+    client.query('SELECT * FROM test_table', function(err, result) {
+      done();
+      if (err)
+       { console.error(err); response.send("Error " + err); }
+      else
+       { response.render('pages/db', {results: result.rows} ); }
     });
   });
-})
+});
 
-server.listen(3001)
+app.get('/', function(request, response) {
+  response.render('pages/index')
+});
+
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
+});
