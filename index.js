@@ -23,7 +23,7 @@ app.get('/db', function (request, response) {
        { response.render('pages/db', {results: result.rows} ); }
     });
   });
-})
+});
 
 app.get('/', function(request, response) {
   response.render('pages/index')
