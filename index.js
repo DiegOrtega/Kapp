@@ -2,7 +2,8 @@
 var express = require('express');
 var app = express();
 var pg = require('pg');
-var conString = "postgres://postgres:1234@localhost/postgres";
+var DATABASE_URL = "postgres:///$(whoami)";
+
 
 app.set('port', (process.env.PORT || 5000));
 
