@@ -2,7 +2,6 @@ var cool = require('cool-ascii-faces');
 var express = require('express');
 var app = express();
 var pg = require('pg');
-var DATABASE_URL = "postgres://mpjcvtjxocsmeb:gruLA0ckuOeqIRfkRyHDp9Vre9@ec2-54-204-27-193.compute-1.amazonaws.com:5432/d63j6ljg1re6ac";
 
 
 app.set('port', (process.env.PORT || 5001));
