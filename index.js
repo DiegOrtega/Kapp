@@ -1,4 +1,5 @@
 var cool = require('cool-ascii-faces');
+var query = require('pg-query');
 var express = require('express');
 var pg = require('pg');
 var conString = process.env.DATABASE_URL || "postgres://mpjcvtjxocsmeb:gruLA0ckuOeqIRfkRyHDp9Vre9@ec2-54-204-27-193.compute-1.amazonaws.com:5432/d63j6ljg1re6ac";
@@ -17,9 +18,7 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
 app.get('/db', function (request, response) {
-  pg.connect(conString
-
-    , function(err, client, done) {
+  pg.connect(conString, function(err, client, done) {
     client.query('SELECT * FROM test_table', function(err, result) {
       done();
       if (err)
