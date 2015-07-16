@@ -1,9 +1,10 @@
 var cool = require('cool-ascii-faces');
 var express = require('express');
 var pg = require('pg');
+var conString = process.env.DATABASE_URL || "postgres://mpjcvtjxocsmeb:gruLA0ckuOeqIRfkRyHDp9Vre9@ec2-54-204-27-193.compute-1.amazonaws.com:5432/d63j6ljg1re6ac";
+//var client = new pg.Client(conString);
+//client.connect();
 var app = express();
-
-
 
 app.set('port', (process.env.PORT || 5001));
 
@@ -14,15 +15,9 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
 app.get('/db', function (request, response) {
-  pg.connect(procces.env.DATABASE_URL, function (err, client, done) {
-    client.query('SELECT * FROM test_table', function (err, result) {
-      done();
-      if (err)
-       { console.error(err); response.send("Error " + err); }
-      else
-        
-       { response.render('pages/db', {results: result.rows} ); }
-    });
+  pg.connect(conString, function (err, client, done) {
+    var query = client.query('CREATE TABLE items(id SERIAL PRIMARY KEY, text VARCHAR(40) not null, complete BOOLEAN)');
+query.on('end', function() { client.end(); });
   });
 });
 
@@ -30,7 +25,7 @@ app.get('/', function (request, response) {
   response.render('pages/index')
 });
 
-app.get('/cool', function (request, response) {
+app.get('/cool', function (request, response) {process.env.DATABASE_URL || 
   response.send(cool());
 });
 
