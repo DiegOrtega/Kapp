@@ -1,15 +1,15 @@
 var cool = require('cool-ascii-faces');
-var query = require('pg-query');
 var express = require('express');
 var pg = require('pg');
+var query = require("pg-query");
 var conString = process.env.DATABASE_URL || "postgres://mpjcvtjxocsmeb:gruLA0ckuOeqIRfkRyHDp9Vre9@ec2-54-204-27-193.compute-1.amazonaws.com:5432/d63j6ljg1re6ac";
-var Sequelize = require('sequelize');
-var sequelize = new Sequelize('postgres://mpjcvtjxocsmeb:gruLA0ckuOeqIRfkRyHDp9Vre9@ec2-54-204-27-193.compute-1.amazonaws.com:5432/d63j6ljg1re6ac');
-//var client = new pg.Client(conString);
-//client.connect();
+//var Sequelize = require('sequelize');
+//var sequelize = new Sequelize('postgres://mpjcvtjxocsmeb:gruLA0ckuOeqIRfkRyHDp9Vre9@ec2-54-204-27-193.compute-1.amazonaws.com:5432/d63j6ljg1re6ac');
 var app = express();
+var client = new pg.Client(conString);
+//client.connect();
 
-app.set('port', (process.env.PORT || 5001));
+app.set('port', (process.env.PORT || 5023));
 
 app.use(express.static(__dirname + '/public'));
 
@@ -17,20 +17,20 @@ app.use(express.static(__dirname + '/public'));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
-app.get('/db', function (request, response) {
-  pg.connect(conString, function(err, client, done) {
-    client.query('SELECT * FROM test_table', function(err, result) {
-      done();
-      if (err)
-       { console.error(err); response.send("Error " + err); }
-      else
-       { response.render('pages/db', {results: result.rows} ); }
-    });
-  });
+app.get('/marafaka', function (request, response) {
+  response.render('pages/index')
 });
 
-app.get('/', function (request, response) {
-  response.render('pages/index')
+app.get('/db', function (request, response) {
+  pg.connect(conString, function (err, client, done) {
+    query('SELECT * FROM test_table', function (err, result) {
+      if (err)
+       { console.error(err); response.send("Error #marafaka " + err); }
+      else
+       { response.render('pages/db', {results: result.rows} ); };
+    done();  
+    });
+  });
 });
 
 app.get('/cool', function (request, response) {process.env.DATABASE_URL || 
