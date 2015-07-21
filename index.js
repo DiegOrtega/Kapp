@@ -18,6 +18,14 @@ app.get('/', function (request, response) {
   response.render('pages/index')
 });
 
+app.get('/about', function (request, response) {
+  response.render('pages/about')
+});
+
+app.get('/contact', function (request, response) {
+  response.render('pages/contact')
+});
+
 app.get('/db', function (request, response) {
   pg.connect(conString, function (err, client, done) {
     query('SELECT * FROM test_table', function (err, result) {
