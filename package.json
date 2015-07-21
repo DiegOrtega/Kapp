@@ -11,13 +11,7 @@
     "ejs": "^2.3.1",
     "express": "~4.9.x",
     "pg": "^4.4.0",
-    "pg-hstore": "^2.3.2",
-    /*"nopt": "~1.0.10",
-    "findup-sync": "~0.1.0",
-    "resolve": "~0.3.1",
-    "jade": "latest",
-    "underscore":"latest",
-    "nodemon": "latest"*/
+    "pg-hstore": "^2.3.2"
   },
   "devDependencies": {
     "grunt": "latest",
