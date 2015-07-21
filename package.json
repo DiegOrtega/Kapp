@@ -16,7 +16,6 @@
     "nopt": "~1.0.10",
     "findup-sync": "~0.1.0",
     "resolve": "~0.3.1",
-    "jade": "latest",
     "underscore":"latest",
     "nodemon": "latest"
   },
