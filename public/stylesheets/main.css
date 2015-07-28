@@ -1,15 +1,16 @@
- /*
+/*
  * {
    border: 1px dashed;
   color: #0000ff; 
 }
- Initial body */
+
+ /*Initial body */
 body {
   left: 0;
   margin: 0;
-  overflow: hidden;
- /* position: relative; */
-  background-image: url('/stylesheets/Lighthouse.jpg'); 
+  overflow: auto;
+  position: scroll; 
+  background-image: url('/stylesheets/img-p.jpg'); 
   -webkit-background-size: cover;
      -moz-background-size: cover;
        -o-background-size: cover;
@@ -34,17 +35,17 @@ body {
     src: url("/fonts/stellar-light.otf");
 }
 
-/* Basic styling 
+ /*Basic styling*/ 
 .jumbotron {
-  background-image: url('/stylesheets/Lighthouse.jpg'); 
+  background-image: url('/stylesheets/img-p.jpg'); 
   -webkit-background-size: cover;
      -moz-background-size: cover;
        -o-background-size: cover;
           background-size: cover;
-  border: 1px dashed;
-  color: #0000ff;
+  margin-bottom: 0;
+  padding: 0;
 }
-*/
+
 .menu ul {
   border-top: 1px solid #636366;
   list-style: none;
@@ -91,6 +92,8 @@ body {
   text-transform: uppercase;
   text-align: center;
   font-size: 100px;
+  margin-bottom: 0;
+  margin-top: 0px;
 }
 
 #sTi {
@@ -99,4 +102,18 @@ body {
   text-transform: uppercase;
   text-align: center;
   font-size: 50px;
+  margin-bottom: 0;
+}
+
+#reg {
+  text-align: right;
+  color: #fff;
+  font-family: myFirstFont,"Pier Sans",'Open Sans', sans-serif;
+  text-transform: uppercase;
+}
+
+#par {
+  text-align: center;
+  color: #fff;
+  font-family: myFirstFont,"Pier Sans",'Open Sans', sans-serif; 
 }

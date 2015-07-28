@@ -26,6 +26,10 @@ app.get('/contact', function (request, response) {
   response.render('pages/contact')
 });
 
+app.get("/registro", function (request, response){
+  response.render("pages/registro")
+});
+
 app.get('/db', function (request, response) {
   pg.connect(conString, function (err, client, done) {
     query('SELECT * FROM test_table', function (err, result) {
