@@ -1,176 +1,27 @@
-/*
- * {
-   border: 1px dashed;
-  color: #0000ff; 
-}
-
- /*Initial body */
-body {
-  background-image: url('/stylesheets/img-p.jpg'); 
-  -webkit-background-size: cover;
-     -moz-background-size: cover;
-       -o-background-size: cover;
-          background-size: cover;
-  background-position: center;
-  background-repeat:no-repeat;
-  background-attachment: scroll;
-  position:relative;
-}
-
-
-
-/* Initial menu */
-.menu {
-  background: #202024 url('/') repeat left top;
-  left: -285px;  /* start off behind the scenes */
-  height: 100%;
-  position: fixed;
-  width: 285px;
-}
-
-/* Extras*/
-@font-face {
-    font-family: myFirstFont;
-    src: url("/fonts/stellar-light.otf");
-}
-
- /*Basic styling*/ 
 .jumbotron {
-  background-image: url('/stylesheets/img-p.jpg'); 
-  -webkit-background-size: cover;
-     -moz-background-size: cover;
-       -o-background-size: cover;
-          background-size: cover;
-  background-position: center;
-  background-repeat:no-repeat;
-  background-attachment: fixed;
-  margin-bottom: 0;
-  margin-top: 0;
-  padding: 0;
-}
-
-.menu ul {
-  border-top: 1px solid #636366;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.menu li {
-  border-bottom: 1px solid #636366;
-  font-family: myFirstFont,'Open Sans', sans-serif;
-  line-height: 45px;
-  padding-bottom: 3px;
-  padding-left: 20px;
-  padding-top: 3px;
-}
-
-.menu a {
-  color: #fff;
-  font-size: 15px;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.icon-menu {
-  color: #fff;
-  cursor: pointer;
-  font-family: myFirstFont,'Open Sans', sans-serif;
-  font-size: 16px;
-  padding-bottom: 25px;
-  padding-left: 25px;
-  padding-top: 25px;
-  padding-right: 25px;
-  text-decoration: none;
-  text-transform: uppercase;
-  position:fixed;
-}
-
-.icon-menu i {
-  margin-right: 5px;
-}
-
-section {
-  padding-top: 0px;
-}
-
-
-.bloques {
-  border:100px;
-  padding:100px;
-}
-
-#industria {
-  background-image: url('/stylesheets/Caballo.jpg');
-   -webkit-background-size: cover;
-     -moz-background-size: cover;
-       -o-background-size: cover;
-          background-size: cover;
-  background-position: center;
-  background-repeat:no-repeat;
-  background-attachment: scroll;
-  width: 400px;
-  height: 450px;
-  cursor: pointer;
-  display: inline-block;
-  padding-left:200px;
-  padding-right:200px;
-}
-
-#artista{
-background-image: url('/stylesheets/Caballo.jpg');
-   -webkit-background-size: cover;
-     -moz-background-size: cover;
-       -o-background-size: cover;
-          background-size: cover;
-  background-position: center;
-  background-repeat:no-repeat;
-  background-attachment: scroll;
-  width: 400px;
-  height: 450px;
-  cursor: pointer;
-  display: inline-block;
-  padding-left:200px;
-  padding-right:200px;
-}
-
-#Ti { 
+  background: #532F8C;
   color: white;
-  font-family: myFirstFont,"Pier Sans",'Open Sans', sans-serif;
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 100px;
-  top:0;
-  margin-top: 0px;
-  margin-right: 0px;
+  padding-bottom: 80px; }
+  .jumbotron .btn-primary {
+    background: #845ac7;
+    border-color: #845ac7; }
+    .jumbotron .btn-primary:hover {
+      background: #7646c1; }
+  .jumbotron p {
+    color: #d9ccee;
+    max-width: 75%;
+    margin: 1em auto 2em; }
+  .navbar + .jumbotron {
+    margin-top: -20px; }
+  .jumbotron .lang-logo {
+    display: block;
+    background: #B01302;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border: 2px solid white; }
+    .jumbotron .lang-logo img {
+      max-width: 100%; }
 
-}
-
-#sTi {
-  color: #fff;
-  font-family: myFirstFont,"Pier Sans",'Open Sans', sans-serif;
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 50px;
-  left: 150px;
-  right:150px;
-}
-
-#reg {
-  text-align: right;
-  color: #fff;
-  font-family: myFirstFont,"Pier Sans",'Open Sans', sans-serif;
-  text-transform: uppercase;
-}
-
-#par {
-  text-align: justify;
-  color: black;
-  font-family: myFirstFont,"Pier Sans",'Open Sans', sans-serif; 
-  margin-left: 200px;
-  margin-right: 200px;
-  font-size: 20px;
-  background-color: white; opacity:0.6;
-  border-radius:10px;
-}
-  
