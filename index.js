@@ -9,6 +9,10 @@ app.use(express.static(__dirname + '/public'));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
+app.get('/index', function(request, response) {
+  response.render('pages/index');
+});
+
 app.get('/', function(request, response) {
   response.render('pages/index');
 });
@@ -45,8 +49,8 @@ app.get('/blog-3', function(request, response) {
   response.render('pages/blog-3');
 });
 
-app.get('/blog-detail-2', function(request, response) {
-  response.render('pages/blog-detail-2');
+app.get('/blog-detail', function(request, response) {
+  response.render('pages/blog-detail');
 });
 
 app.get('/blog', function(request, response) {
