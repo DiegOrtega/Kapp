@@ -14,7 +14,7 @@ app.get('/index', function(request, response) {
 });
 
 app.get('/', function(request, response) {
-  response.render('pages/index');
+  response.render('pages/about-us');
 });
 
 app.get('/about-us', function(request, response) {
@@ -51,6 +51,10 @@ app.get('/blog-3', function(request, response) {
 
 app.get('/blog-detail', function(request, response) {
   response.render('pages/blog-detail');
+});
+
+app.get('/blog-detail-2', function(request, response) {
+  response.render('pages/blog-detail-2');
 });
 
 app.get('/blog', function(request, response) {

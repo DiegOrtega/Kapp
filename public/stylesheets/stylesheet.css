@@ -1948,9 +1948,20 @@ span.num-data{font-size: 11px;}
 /*-------------------------------------------------------------------------------------------------------------------------------*/
 .about-description { margin-bottom: 85px; }
 
-.about-description .img-responsive { margin-bottom: 10px; }
+.about-description .img-responsive { 
+  background-image: url("/img/K-APP.jpg");
+  margin-bottom: 10px;
+  border-radius:10px;
+}
 
-.about-description .about-text { font-size: 12px; line-height: 20px; font-weight: 400; color: #b4b7c1; text-align: center; }
+
+.about-description .about-text {
+  font-size: 20px; 
+  line-height: 30px; 
+  font-weight: 400; 
+  color: #5B6486; 
+  text-align: justify; 
+}
 
 .team-entry { border: 1px solid #edeff2; border-radius: 3px; }
 
@@ -2002,7 +2013,12 @@ span.num-data{font-size: 11px;}
 
 .info-blocks { background: #fafafa; margin-bottom: 85px !important; }
 
-.info-text .block-title { font-size: 32px; line-height: 40px; font-family: 'Conv_helveticaneuecyr-bold'; color: #383b43; margin-bottom: 42px; }
+.info-text .block-title { font-size: 32px; 
+  line-height: 40px; 
+  font-family: 'Conv_helveticaneuecyr-bold'; 
+  color: #5B6486; 
+  margin-bottom: 42px; 
+}
 
 .info-text h4 { font-size: 16px; line-height: 21px; font-family: 'Conv_helveticaneuecyr-bold'; color: #383b43; margin-bottom: 20px; }
 
@@ -2023,7 +2039,14 @@ span.num-data{font-size: 11px;}
 /*-------------------------------------------------------------------------------------------------------------------------------*/
 .block { margin-bottom: 85px !important; }
 
-.block .block-title { font-size: 32px; line-height: 28px; margin-bottom: 10px; text-align: center; font-family: 'Conv_helveticaneuecyr-bold'; }
+.block .block-title { 
+  font-size: 32px; 
+  line-height: 28px; 
+  margin-bottom: 10px; 
+  text-align: center; 
+  font-family: 'Conv_helveticaneuecyr-bold'; 
+  color: #5B6486;
+}
 
 .block .block-subtitle { font-size: 16px; line-height: 20px; font-weight: 400; color: #b4b7c1; text-align: center; margin-bottom: 40px; }
 
@@ -2615,7 +2638,9 @@ transition: all ease-out 0.3s;}
 }
 
 .logo-c {
+  
   display: none;
+  
 }
 .logo-c.active {
   display: block;

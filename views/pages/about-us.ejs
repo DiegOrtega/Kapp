@@ -2,24 +2,6 @@
 <html>
 	<head>
 		 <% include ../partials/header.ejs %>
-		<title>NGRNetwork</title>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<link rel="shortcut icon" href="img/favicon.png">
-    	<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="style/bootstrap.min.css">
-		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="style/icon.css">
-		<link rel="stylesheet" href="style/loader.css">
-		<link rel="stylesheet" href="style/idangerous.swiper.css">
-		<link rel="stylesheet" href="style/stylesheet.css">
-		<!--[if lt IE 10]>
-			<link rel="stylesheet" type="text/css" href="style/ie-9.css" />
-		<![endif]-->		
-		<!--[if lt IE 9]>
-		    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-		    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	    <![endif]-->
 	    
 	</head>
 	<body>
@@ -43,7 +25,7 @@
 			<div class="row no_row row-header">
 <div class="brand-be">
 	<a href="index">
-		<img class=" be_logo logo-c active"  src="img/logo.png" alt="logo" >
+		<img class=" be_logo logo-c active" src="img/logo.png" width="100px" height="37px" alt="logo" >
 		<img class="logo-c be_logo" src="img/logo-green.png" alt="logo" >
 		<img  class="logo-c be_logo" src="img/logo-orang.png" alt="logo" >
 		<img class="logo-c be_logo" src="img/logo-red.png" alt="logo">
@@ -52,23 +34,23 @@
 				<div class="header-menu-block">
 					<button class="cmn-toggle-switch cmn-toggle-switch__htx"><span></span></button>
 					<ul class="header-menu" id="one">
-						<li><a href="activity">Activity</a></li>
-						<li><a href="search">Discover</a>
+						<li><a href="activity">Actividad</a></li>
+						<li><a href="search">Descubre</a>
 							<ul>
 								<li><a href="search">Explore</a></li>
 								<li><a href="people">People</a></li>
 								<li><a href="gallery">Galleries</a></li>
 							</ul>
 						</li>
-						<li><a href="author-login">My Portfolio</a></li>
-						<li><a href="site-map">Site Map</a></li>
-						<li id="ad-work-li"><a id="add-work-btn" class="btn color-1" href="work">Add Work </a></li>
+						<li><a href="author-login">Perfil de Usuario</a></li>
+						<li><a href="site-map">Mapa del Sitio</a></li>
+						<li id="ad-work-li"><a id="add-work-btn" class="btn color-1" href="work">Crear Proyecto</a></li>
 					</ul>
 				</div>
 				<div class="login-header-block">
 					<div class="login_block">
 						<a class="btn-login btn color-1 size-2 hover-2" href="blog-detail-2"><i class="fa fa-user"></i>
-						Log in</a>
+						Entrar</a>
 					</div>	
 				</div>
 			</div>
@@ -77,16 +59,31 @@
 	<!-- MAIN CONTENT -->
 	<div id="content-block">
 		<div class="head-bg style-3 ab-us">
-			<div class="swiper-container" data-autoplay="2000" data-loop="0" data-speed="500" data-center="0" data-slides-per-view="1">
+			<div class="swiper-container" data-autoplay="2000" data-loop="0" data-speed="5000" data-center="0" data-slides-per-view="1">
                 <div class="swiper-wrapper">
                 	<div class="swiper-slide head-bg-img " data-val="0">
-                		<img class="center-image" src="img/bg-3.jpg" alt="">
+                		<img class="center-image" src="img/proto1.jpg" alt="">
                 	</div>
                 	<div class="swiper-slide head-bg-img" data-val="1">
-                		<img class="center-image" src="img/bg-2.jpg" alt="">	
+                		<img class="center-image" src="img/Chapalajalisco.jpg" alt="">	
                 	</div>
                 	<div class="swiper-slide head-bg-img" data-val="2">
-                		<img class="center-image" src="img/bg-5.jpg" alt="">	
+                		<img class="center-image" src="/img/K-APPold.png" alt="">	
+                	</div>
+                	<div class="swiper-slide head-bg-img " data-val="3">
+                		<img class="center-image" src="/img/bahia.jpg" alt="">
+                	</div>
+                	<div class="swiper-slide head-bg-img" data-val="2">
+                		<img class="center-image" src="/img/Diagramas.png" alt="">	
+                	</div>
+                	<div class="swiper-slide head-bg-img" data-val="4">
+                		<img class="center-image" src="img/asta.jpg" alt="">	
+                	</div>
+                	<div class="swiper-slide head-bg-img" data-val="5">
+                		<img class="center-image" src="/img/perfil_de_usuario.png" alt="">	
+                	</div>
+                	<div class="swiper-slide head-bg-img" data-val="5">
+                		<img class="center-image" src="/img/Chimenea.jpg" alt="">	
                 	</div>
                 </div>
                 <div class="pagination hidden"></div>
@@ -94,31 +91,50 @@
 			<div class="head-bg-content">
                 <div class="swiper-arrow-left type-2 be-out"></div>
                 <div class="swiper-arrow-right type-2 be-out"></div>
-				<h1>Some Information about our Company</h1>
-				<p>Donec in rhoncus tortor. Sed tristique auctor ligula vel viverra</p>
+				<h1 style="font-size:800%;">Tractus</h1>
+				<p style="font-size:300%;">Sueña. Conecta. Crea.</p>
 				<a class="btn color-1 size-1 hover-1" href="blog-detail-2"><i class="fa fa-facebook"></i>sign up via facebook</a>
 				<a class="be-register btn color-3 size-1 hover-6"><i class="fa fa-lock"></i>sign up now</a>
 			</div>	
 		</div>
 		<div class="container">
 			<div class="about-description">
-				<img class="img-responsive" src="img/about.jpg" alt="">
+				<img class="img-responsive" style="background-attachment: fixed; background-position: center;  width: 2000px; height:300px;" alt="WTF"> 
+  
 				<div class="row">
 					<div class="col-xs-12 col-md-10 col-md-offset-1">
-						<div class="about-text">Duis pretium diam auctor velit tempus imperdiet. Duis velit ipsum, consequat vitae bibendum in, vestibulum sit amet turpis. Fusce venenatis egestas ultrices. Nam nec porttitor metus. Ut eros arcu, pretium at nunc eu, vulputate efficitur tellus. Vivamus tempus sem et metus euismod, a facilisis est egestas. Ut nunc eros, suscipit vitae tincidunt ut, dapibus a eros. Cras euismod dui sapien.Vestibulum varius ultrices arcu. Sed semper leo ex, sit amet rutrum est blandit sit amet. Ut magna neque, congue at augue eget, ullamcorper luctus ligula. Cras scelerisque nisi at nibh gravida consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet nulla nunc. Curabitur risus sapien, convallis non tortor eget, interdum tempus ligula. </div>
+						
+						<div class="about-text">
+							<br />
+
+							<h1 style="text-align:center;">¿Qué es Tractus?</h1>
+						<br />
+							Tractus es un lienzo creativo, un espacio para depositar los sueños de los nuevos artistas, para conectarlos con su futuro y unirlos para crear.
+						
+						<br>
+						<br />	
+							<h1>L'art pour l'art</h1>
+						<br />
+
+							Nuestra filosofía es simple, Creemos firmemente que el arte encuentra su mayor valor cuando es el mismo arte el motor de nuestra creatividad.
+							Sabemos que la vida del artista no es fácil, también reconocemos que las dificultades moldan a los mejores. Para las nuevas generaciones de artistas encontrar un espacio en un mundo monetizado representa un obstáculo infranqueable. Tenemos un reto en esa área y aunque conocemos las malas noticias,
+							estamos comprometidos a vencer las viejas inercias para crear un espacio para la creación artística, en aras de favorecer al arte no sólo como una industria rentable sino como una herramienta que nos ayude a enfrentar las adversidades de la vida, y al integrar el arte en cada aspecto de ella, vivir mejor.
+					
+						<br>
+						<br />		
 					</div>
 				</div>
 			</div>
 			<div class="block">
-				<h3 class="block-title">Our Team As They Are</h3>
-				<div class="block-subtitle">Cras vel dui tempor lorem ultrices eleifend non nec enim. Aliquam condimentum at diam vitae vulputate.</div>
+				<h3 class="block-title">Nuestro Equipo</h3>
+				<div class="block-subtitle"><h2>Tractus está conformado por un grupo de estudiantes interesados en impactar positivamente a la sociedad</h2></div>
 				<div class="row">
 					<div class="col-ml-12 col-xs-6 col-sm-6 col-md-3">
 						<div class="team-entry">
-							<a href="blog-detail-2"><img class="img-responsive img-full" src="img/team_1.jpg" alt=""></a>
-							<h4 class="team-name">Marcus Finderman</h4>
+							<a href="blog-detail-2"><img class="img-responsive img-full" src="img/Diego_prof.jpg" style="width: 269px; height: 202px;"></a>
+							<h4 class="team-name">Diego Ortega</h4>
 							<div class="team-position">
-								<a href="blog-detail-2" class="be-post-tag">Art Director</a>,
+								<a href="blog-detail-2" class="be-post-tag">Líder de Producto</a>,
 								<a href="blog-detail-2" class="be-post-tag">Creative  Designer</a>								
 							</div>
 							<div class="team-social">
@@ -130,10 +146,11 @@
 					</div>
 					<div class="col-ml-12 col-xs-6 col-sm-6 col-md-3">
 						<div class="team-entry">
-							<a href="blog-detail-2"><img class="img-responsive img-full" src="img/team_2.jpg" alt=""></a>
-							<h4 class="team-name">Boney mcFannin</h4>
+							<a href="blog-detail-2"><img class="img-responsive img-full" src="img/Karen_pf.jpg" alt="" style="postion: center; width: 269px; height: 202px;"></a>
+							<h4 class="team-name">Karen Marin</h4>
 							<div class="team-position">
-								<a href="blog-detail-2" class="be-post-tag">Web Developer</a>								
+								<a href="blog-detail-2" class="be-post-tag">Diseñadora</a>	
+								<a href="blog-detail-2" class="be-post-tag">Líder de experiencia</a>								
 							</div>
 							<div class="team-social">
 								<a href="blog-detail-2"><i class="fa fa-facebook"></i></a>
@@ -145,9 +162,10 @@
 					<div class="col-ml-12 col-xs-6 col-sm-6 col-md-3">
 						<div class="team-entry">
 							<a href="blog-detail-2"><img class="img-responsive img-full" src="img/team_5.jpg" alt=""></a>
-							<h4 class="team-name">Jerremy Dawson</h4>
+							<h4 class="team-name">Eduardo</h4>
 							<div class="team-position">
-								<a href="blog-detail-2" class="be-post-tag">Illustrator</a>								
+								<a href="blog-detail-2" class="be-post-tag">Programador de Front-End</a>
+								<a href="blog-detail-2" class="be-post-tag">Líder Tecnológico</a>								
 							</div>
 							<div class="team-social">
 								<a href="blog-detail-2"><i class="fa fa-facebook"></i></a>
@@ -159,7 +177,7 @@
 					<div class="col-ml-12 col-xs-6 col-sm-6 col-md-3">
 						<div class="team-entry">
 							<a href="blog-detail-2"><img class="img-responsive img-full" src="img/team_4.jpg" alt=""></a>
-							<h4 class="team-name">Jhon Makauer</h4>
+							<h4 class="team-name">Óscar Gutiérrez</h4>
 							<div class="team-position">
 								<a href="blog-detail-2" class="be-post-tag">Manager</a>								
 							</div>
@@ -169,10 +187,12 @@
 								<a href="blog-detail-2"><i class="fa fa-google-plus"></i></a>							
 							</div>
 						</div>
-					</div>															
+					</div>
+																			
 				</div>
 			</div>
 		</div>
+		<!-- 
 		<div class="counters-block number-counters">
 			<img class="center-image" src="img/bg-5.jpg" alt="">
 			<div class="container">
@@ -213,59 +233,60 @@
 				</div>
 			</div>
 		</div>
+	-->
 		<div class="container">
 			<div class="block">
-				<h3 class="block-title">Services</h3>
-				<div class="block-subtitle">Nulla id risus urna. Ut commodo leo quis </div>
+				<h3 class="block-title">Servicios</h3>
+				<div class="block-subtitle">Tractus ofrecerá una serie integral de servicios especializados para cada rama de las artes audiovisuales.</div>
 
 				<div class="swiper-container" data-autoplay="5000" data-loop="0" data-speed="300" data-center="0" data-slides-per-view="responsive" data-xs-slides="1" data-sm-slides="2" data-md-slides="3" data-lg-slides="3" data-add-slides="3">
                     <div class="swiper-wrapper">
                     	<div class="swiper-slide" data-val="0">
 							<div class="service-entry">
 								<img class="service-icon" src="img/service_1.png" alt="">
-								<h4 class="service-title">Ideas for everyone</h4>
-								<div class="service-text">Morbi efficitur feugiat erat a efficitur. Donec interdum, nunc ac elementum auctor, dui nisl placerat odio</div>
-								<a class="btn color-1 size-2 hover-1">read more</a>
+								<h4 class="service-title">Creación de Proyectos</h4>
+								<div class="service-text">Dentro de Tractus podrás aterrizar tus proyectos <br> para recibir apoyo de los profesionales</div>
+								<a class="btn color-1 size-2 hover-1">Leer más</a>
 							</div>
                         </div>
                     	<div class="swiper-slide" data-val="1">
 							<div class="service-entry">
 								<img class="service-icon" src="img/service_2.png" alt="">
-								<h4 class="service-title">Developing pages</h4>
-								<div class="service-text">Fusce id euismod diam, quis venenatis ipsum. Quisque lacinia non dui id fermentum. Ut libero nulla, auctor nec</div>
-								<a class="btn color-1 size-2 hover-1">read more</a>
+								<h4 class="service-title">Comunidad Tractus</h4>
+								<div class="service-text">Se promovera una relación dinámica entre los usarios de la plataforma <br> con foros de discusión y un blog de la empresa</div>
+								<a class="btn color-1 size-2 hover-1">Leer Más</a>
 							</div>
                         </div>
                     	<div class="swiper-slide" data-val="2">
 							<div class="service-entry">
 								<img class="service-icon" src="img/service_3.png" alt="">
-								<h4 class="service-title">Easy in touch</h4>
-								<div class="service-text">Curabitur tincidunt eros et felis eleifend, sed pharetra leo scelerisque. In accumsa</div>
+								<h4 class="service-title">Nunca más fácil de usar</h4>
+								<div class="service-text">Con Tractus la experiencia del usuario es lo más importante, <br> por eso sólo usamos las más altas tecnologías del diseño web</div>
 								<a class="btn color-1 size-2 hover-1">read more</a>
 							</div>
                         </div>
                     	<div class="swiper-slide" data-val="3">
 							<div class="service-entry">
 								<img class="service-icon" src="img/service_1.png" alt="">
-								<h4 class="service-title">Ideas for everyone</h4>
-								<div class="service-text">Morbi efficitur feugiat erat a efficitur. Donec interdum, nunc ac elementum auctor, dui nisl placerat odio</div>
-								<a class="btn color-1 size-2 hover-1">read more</a>
+								<h4 class="service-title">Te pagamos por compartir tus ideas</h4>
+								<div class="service-text">Tractus convierte tus likes en dinero para tus proyectos.</div>
+								<a class="btn color-1 size-2 hover-1">Leer Más</a>
 							</div>
                         </div>
                     	<div class="swiper-slide" data-val="4">
 							<div class="service-entry">
 								<img class="service-icon" src="img/service_2.png" alt="">
-								<h4 class="service-title">Developing pages</h4>
-								<div class="service-text">Fusce id euismod diam, quis venenatis ipsum. Quisque lacinia non dui id fermentum. Ut libero nulla, auctor nec</div>
-								<a class="btn color-1 size-2 hover-1">read more</a>
+								<h4 class="service-title">Capacitación</h4>
+								<div class="service-text">Una serie de talleres y videoblogs serán desplegados para que sirvan como herramientas para conocer los servicios de Tractus <br> así cómo fortalecer el desarrollo de los artistas.</div>
+								<a class="btn color-1 size-2 hover-1">Leer Más</a>
 							</div>
                         </div>
                     	<div class="swiper-slide" data-val="5">
 							<div class="service-entry">
 								<img class="service-icon" src="img/service_3.png" alt="">
-								<h4 class="service-title">Easy in touch</h4>
-								<div class="service-text">Curabitur tincidunt eros et felis eleifend, sed pharetra leo scelerisque. In accumsa</div>
-								<a class="btn color-1 size-2 hover-1">read more</a>
+								<h4 class="service-title">Fácil contacto</h4>
+								<div class="service-text">Mensajería privada totalmente encriptada</div>
+								<a class="btn color-1 size-2 hover-1">Leer Más</a>
 							</div>
                         </div>                                                     
                     </div>
@@ -280,11 +301,11 @@
 				<div class="info-entry left table-block">
 					<div class="row table-row">
 						<div class="table-cell col-xs-12 col-sm-6">
-							<img class="img-responsive img-full" src="img/info_block_1.jpg" alt="">
+							<img class="img-responsive img-full" src="/img/Violinista.jpg" alt="">
 						</div>
 						<div class="table-cell col-xs-12 col-sm-6">
 							<div class="info-text">
-								<h3 class="block-title">Work With Us</h3>
+								<h3 class="block-title">Nuestro Compromiso</h3>
 								<div class="row">
 									<div class="col-xs-12 col-sm-6">
 										<h4>Why our team</h4>
@@ -305,7 +326,8 @@
 					<div class="row table-row">
 						<div class="table-cell col-xs-12 col-sm-6">
 							<div class="info-text">
-								<h3 class="block-title">Work With Us</h3>
+								<br>
+								<h3 class="block-title">Comunidad Tractus</h3>
 									<h4><i class="fa fa-camera"></i> Photoshoot as work</h4>
 									<p>Aliquam id rhoncus enim, non malesuada dui. Phasellus at orci sed justo pharetra aliquet sed non urna. Aliquam erat volutpat. Cras feugiat ullamcorper nunc id tempor. Etiam et sapien consectetur, vehicula purus quis, ultrices lectus. Praesent congue lectus sit amet eros sagittis consequat. Phasellus nec diam non enim condimentum dapibus id non ligula. Sed euismod vitae odio vitae condimentum.</p>
 
@@ -316,7 +338,7 @@
 							</div>
 						</div>
 						<div class="table-cell col-xs-12 col-sm-6">
-							<img class="img-responsive img-full" src="img/info_block_2.jpg" alt="">
+							<img class="img-responsive img-full" src="/img/Dimanche.jpg" alt="">
 						</div>						
 					</div>
 				</div>				
