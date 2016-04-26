@@ -57,6 +57,22 @@ app.get('/blog-detail-2', function(request, response) {
   response.render('pages/blog-detail-2');
 });
 
+app.get('/perfil_karen', function(request, response) {
+  response.render('pages/perfil_karen');
+});
+
+app.get('/perfil_Diego', function(request, response) {
+  response.render('pages/perfil_Diego');
+});
+
+app.get('/perfil_Eduardo', function(request, response) {
+  response.render('pages/perfil_Eduardo');
+});
+
+app.get('/perfil_oscar', function(request, response) {
+  response.render('pages/perfil_oscar');
+});
+
 app.get('/blog', function(request, response) {
   response.render('pages/blog');
 });
