@@ -68,9 +68,9 @@ ul, li, ol { list-style: none; margin: 0; padding: 0; }
 /*-------------------------------------------------------------------------------------------------------------------------------*/
 /* 01 - GLOBAL SETTINGS */
 /*-------------------------------------------------------------------------------------------------------------------------------*/
-.content-title { font-size: 32px; line-height: 32px; font-family: 'Conv_helveticaneuecyr-bold'; margin-bottom: 30px; color: #383b43; text-align: center; }
+.content-title { font-size: 32px; line-height: 32px; font-family:'Karla', sans-serif; margin-bottom: 30px; color: #383b43; text-align: center; }
 
-.img-full { width: 100%; }
+.img-full { width: 100%;}
 
 .row.no-padding { margin-right: 0px; margin-left: 0px; }
 
@@ -1956,16 +1956,17 @@ span.num-data{font-size: 11px;}
 
 
 .about-description .about-text {
+  font-family: Exo;
+  color: #5B6486; 
   font-size: 20px; 
   line-height: 30px; 
   font-weight: 400; 
-  color: #5B6486; 
   text-align: justify; 
 }
 
 .team-entry { border: 1px solid #edeff2; border-radius: 3px; }
 
-.team-name { font-size: 14px; line-height: 20px; font-family: 'Conv_helveticaneuecyr-bold'; padding: 15px; text-align: center; border-bottom: 1px solid #edeff2; }
+.team-name { font-size: 14px; line-height: 20px; font-family: 'Exo', sans-serif; padding: 15px; text-align: center; border-bottom: 1px solid #edeff2; }
 
 .team-position { padding: 14px 15px; text-align: center; color: #B4B7C1; }
 
@@ -2013,10 +2014,11 @@ span.num-data{font-size: 11px;}
 
 .info-blocks { background: #fafafa; margin-bottom: 85px !important; }
 
-.info-text .block-title { font-size: 32px; 
+.info-text .block-title { 
+  font-size: 32px; 
   line-height: 40px; 
-  font-family: 'Conv_helveticaneuecyr-bold'; 
-  color: #5B6486; 
+  font-family: Exo;
+  color: #b4b7c1;
   margin-bottom: 42px; 
 }
 
@@ -2043,9 +2045,9 @@ span.num-data{font-size: 11px;}
   font-size: 32px; 
   line-height: 28px; 
   margin-bottom: 10px; 
-  text-align: center; 
-  font-family: 'Conv_helveticaneuecyr-bold'; 
-  color: #5B6486;
+  font-family: Exo;
+  color: #b4b7c1;
+  text-align: center;
 }
 
 .block .block-subtitle { font-size: 16px; line-height: 20px; font-weight: 400; color: #b4b7c1; text-align: center; margin-bottom: 40px; }
@@ -3713,3 +3715,10 @@ body .login-user-down:hover {
     background: transparent !important;
 }
 
+.boton-logo {
+    border-radius:20px;
+    background-attachment: fixed; 
+    background-position: center;
+    -webkit-filter: ;contrast(200%) brightness(200%);  /* Chrome, Safari, Opera */
+    filter: contrast(200%) brightness(200%);
+  }
