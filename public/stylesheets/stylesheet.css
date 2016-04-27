@@ -1952,16 +1952,14 @@ span.num-data{font-size: 11px;}
   background-image: url("/img/K-APP.jpg");
   margin-bottom: 10px;
   border-radius:10px;
- 
 }
+
 
 .about-description .img-responsive-2 { 
-  background-image: url("/img/Violinista.jpg");
+  background-image:url("/img/Violinista.jpg");
   margin-bottom: 10px;
   border-radius:10px;
- 
 }
-
 
 .about-description .about-text {
   font-family: Exo;
