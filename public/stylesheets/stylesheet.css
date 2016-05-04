@@ -2478,8 +2478,6 @@ transition: all ease-out 0.3s;}
     transform-origin: 100% 50% 0;
 }
 
-/* v2 */
-
 .ouro2 .right .anim{
    -webkit-animation-delay: 1.5s;
    animation-delay: 1.5s;
@@ -3484,7 +3482,7 @@ input:focus {
 .body-color3 .btn.color-1, .body-color3 .btn.hover-9:hover, .body-color3 .btn.hover-9.active, .body-color3 .form-group.color-4 .form-input, .body-color3 .form-checkbox.style-2 > input:checked + .check:before,
 .body-color3 .alert .close, .body-color3 .accordion.style-1 .acc-title.active, .body-color3 .accordion.style-2 .acc-title.active .acc-icon, .body-color3 .blog-content ul li:before, .body-color3 ul.styled li:before,
 .body-color3 ol.styled li:before, .body-color3 .anim, .body-color3 .up-image, .body-color3 .ui-widget-content {
-    background-color: #f1c40f !important;
+    background-color: #58135D !important;
 }
 
 
@@ -3497,12 +3495,12 @@ input:focus {
 }
 
 .body-color3 .ui-menu-item:hover {
-    background:  #f1c40f !important;
+    background:  #58135D !important;
 }
 
 
 .body-color3 .a-list  a:hover {
-    background: #f1c40f !important;;
+    background: #58135D!important;;
 }
 
 .body-color4 .header-menu > li:hover > a, .body-color4 .header-menu > li.active-header > a,

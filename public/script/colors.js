@@ -18,7 +18,7 @@
 		Colors = window.Colors = function(options) {
 			this.colors = {RND: {}};
 			this.options = {
-				color: 'rgba(204, 82, 37, 0.8)', // init value(s)...
+				color: 'rgba(255, 204, 51, 0.8)', // init value(s)...
 				grey: grey,
 				luminance: luminance,
 				valueRanges: _valueRanges
