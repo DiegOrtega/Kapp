@@ -1959,6 +1959,16 @@ span.num-data{font-size: 11px;}
   background-image:url("/img/Violinista.jpg");
   margin-bottom: 10px;
   border-radius:10px;
+  background-repeat: no-repeat;
+  background-size: cover; 
+}
+
+.about-description .img-responsive-3 { 
+  background-image:url("img/Diego_prof.jpg");
+  margin-bottom: 10px;
+  border-radius:10px;
+  background-repeat: no-repeat;
+  background-size: cover; 
 }
 
 .about-description .about-text {
@@ -3726,3 +3736,17 @@ body .login-user-down:hover {
     border: 1px solid;
     border-color:#FFCC33;
   }
+
+  .videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
