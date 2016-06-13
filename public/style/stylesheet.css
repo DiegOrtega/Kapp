@@ -357,7 +357,14 @@ header .header-menu > #ad-work-li {position: static; float: right;margin-top: 20
 
 .head-bg-img { position: absolute; left: 0; top: 0; background: url(../img/bg.jpg); height: 100%; width: 100%; background-size: cover; opacity: 0.2; z-index: 1; background-position: center center; }
 
-.head-bg-content { height: 400px; text-align: center; position: relative; z-index: 200; display: table-cell; vertical-align: middle; width: 5000px; }
+.head-bg-content { 
+    height: 400px; 
+    text-align: center; 
+    position: relative; 
+    z-index: 200; display: table-cell; 
+    vertical-align: middle; 
+    width: 5000px; 
+}
 
 #content-block .head-bg-content .btn { margin-bottom: 10px; }
 
