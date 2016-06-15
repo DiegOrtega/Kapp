@@ -2,8 +2,6 @@ var express = require('express');
 var app = express();
 var pg = require('pg');
 
-
-
 var conString = "postgres://postgres:LaignoranciaeslaFuerza@localhost/postgres";
  
 var client = new pg.Client(conString);
@@ -144,8 +142,8 @@ app.get('/page1', function(request, response) {
   response.render('pages/page1');
 });
 
-app.get('/page2', function(request, response) {
-  response.render('pages/page2');
+app.get('/Is', function(request, response) {
+  response.render('pages/Is_perfil');
 });
 
 app.get('/page3', function(request, response) {
