@@ -94,7 +94,7 @@ app.get('/perfil_karen', function(request, response) {
   response.render('pages/perfil_karen');
 });
 
-app.get('/perfil_Diego', function(request, response) {
+app.get('/pro_lp', function(request, response) {
   response.render('pages/perfil_Diego');
 });
 
@@ -102,7 +102,7 @@ app.get('/perfil_Eduardo', function(request, response) {
   response.render('pages/perfil_Eduardo');
 });
 
-app.get('/perfil_oscar', function(request, response) {
+app.get('/pro_lca', function(request, response) {
   response.render('pages/perfil_oscar');
 });
 
