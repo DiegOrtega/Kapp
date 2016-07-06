@@ -106,6 +106,10 @@ app.get('/pro_lca', function(request, response) {
   response.render('pages/perfil_oscar');
 });
 
+app.get('/pro_llrp', function(request, response) {
+  response.render('pages/perfil_Beto');
+});
+
 app.get('/blog', function(request, response) {
   response.render('pages/blog');
 });
