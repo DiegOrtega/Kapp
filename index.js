@@ -1,43 +1,130 @@
 var express = require('express');
+var path = require('path');
+var logger = require('morgan');
+var bodyParser = require('body-parser');
+var neo4j = require('neo4j-driver').v1;
+
 var app = express();
-var pg = require('pg');
-
-var conString = "postgres://postgres:LaignoranciaeslaFuerza@localhost/postgres";
- 
-var client = new pg.Client(conString);
-client.connect(function(err) {
-  if(err) {
-    return console.error('could not connect to postgres', err);
-  }
-  client.query('SELECT NOW() AS "theTime"', function(err, result) {
-    if(err) {
-      return console.error('error running query', err);
-    }
-    console.log(result.rows[0].theTime);
-    //output: Tue Jan 15 2013 19:12:47 GMT-600 (CST) 
-    client.end();
-  });
-});
-
-app.get('/db', function (request, response) {
-  pg.connect(conString, function(err, client, done) {
-    client.query('SELECT * FROM test_table', function(err, result) {
-      done();
-      if (err)
-       { console.error(err); response.send("Error " + err); }
-      else
-       { response.render('pages/db', {results: result.rows} ); }
-    });
-  });
-});
-app.set('port', (process.env.PORT || 5000));
-
-app.use(express.static(__dirname + '/public'));
 
 // views is directory for all template files
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
+app.use(logger('dev'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.static(__dirname + '/public'));
+
+app.set('port', (process.env.PORT || 5000));
+
+//var driver = neo4j.driver('bolt://localhost', neo4j.auth.basic('neo4j','tractus0'));
+
+var graphenedbURL = process.env.GRAPHENEDB_BOLT_URL;
+var graphenedbUser = process.env.GRAPHENE_BOLT_USER;
+var graphenedbPass = process.env.GRAPHENE_BOLT_PASSWORD;
+
+var driver = neo4j.driver(graphenedbURL, neo4j.auth.basic(graphenedbUser, graphenedbPass));
+
+var session = driver.session(); 
+/*
+app.get('/db', function(request, response) {
+    session
+        .run('MATCH(n:Movie) WHERE n.title=~"B.*" RETURN DISTINCT n LIMIT 25')
+        .then(function(result){
+            var movieArray = [];
+            result.records.forEach(function(record){
+                movieArray.push({
+                    id: record._fields[0].identity.low,
+                    title: record._fields[0].properties.title,
+                    year: record._fields[0].properties.year
+                });   
+            });
+        
+            session
+                .run('MATCH (n:Person)-[:ACTED_IN]->() RETURN DISTINCT n LIMIT 25')
+                .then(function(result2){
+                    var actorArray = [];
+                    result2.records.forEach(function(record){
+                        actorArray.push({
+                            id: record._fields[0].identity.low,
+                            name: record._fields[0].properties.name
+                        });    
+                    });
+                    response.render('pages/db', {
+                        movies: movieArray,
+                        actors: actorArray
+                    });
+                })
+                .catch(function(err){
+                    console.log(err); 
+            });    
+        })
+        .catch(function(err){
+            console.log(err);
+    });
+});
+
+app.post('/movie/add',function(request, response){
+   var movie_title = request.body.movie_title;   
+   var movie_year = request.body.movie_year;
+   
+    session
+        .run('CREATE (n:Movie {title:{titleParam}, year:{yearParam}})', {titleParam:movie_title, yearParam:movie_year})
+        .then(function(result){
+        response.redirect('/db');
+    
+        session.close;
+    })
+        .catch(function(err){
+        console.log(err);
+    });
+});
+
+app.post('/actor/add',function(request, response){
+   var name = request.body.name;   
+   
+    session
+        .run('CREATE (n:Person {name:{nameParam}})', {nameParam:name})
+        .then(function(result){
+        response.redirect('/db');
+    
+        session.close;
+    })
+        .catch(function(err){
+        console.log(err);
+    });
+});
+
+app.post('/movie/actor/add',function(request, response){
+   var name = request.body.name;
+   var movie_title = request.body.movie_title;    
+   
+    session
+        .run('MERGE (n:Person {name:{nameParam}})-[:ACTED_IN]->(m:Movie {title:{titleParam}})', {nameParam:name, titleParam: movie_title})
+        .then(function(result){
+        response.redirect('/db');
+    
+        session.close;
+    })
+        .catch(function(err){
+        console.log(err);
+    });
+});
+*/
+
+session
+    .run('CREATE (n {hello: "World"}) RETURN n.name) RETURN n.name')
+    .then(function(result){
+        result.records.forEach(function(record){
+            console.log(record)    
+        }); 
+    
+        session.close();
+    })
+    .catch(function(error)}{
+       console.log(error);    
+    });
+ 
 app.get('/index', function(request, response) {
   response.render('pages/index');
 });
@@ -50,9 +137,6 @@ app.get('/', function(request, response) {
   response.render('pages/about-us');
 });
 
-app.get('/about-us', function(request, response) {
-  response.render('pages/about-us');
-});
 
 app.get('/activity', function(request, response) {
   response.render('pages/activity');
