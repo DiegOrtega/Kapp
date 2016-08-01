@@ -13,7 +13,8 @@
     "express": "4.13.3",
     "normalize.css": "^3.0.2",
     "morgan":"1.7.0",
-    "body-parser":"1.15.2"
+    "body-parser":"1.15.2",
+    "neo4j-driver": "*"  
   },
   "engines": {
     "node": "4.4.5"

@@ -17,8 +17,6 @@ app.use(express.static(__dirname + '/public'));
 
 app.set('port', (process.env.PORT || 5000));
 
-
-
 var graphenedbURL = process.env.GRAPHENEDB_BOLT_URL;
 var graphenedbUser = process.env.GRAPHENEDB_BOLT_USER;
 var graphenedbPass = process.env.GRAPHENEDB_BOLT_PASSWORD;
