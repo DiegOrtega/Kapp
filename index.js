@@ -20,13 +20,13 @@ app.set('port', (process.env.PORT || 5000));
 //var driver = neo4j.driver('bolt://localhost', neo4j.auth.basic('neo4j','tractus0'));
 
 var graphenedbURL = process.env.GRAPHENEDB_BOLT_URL;
-var graphenedbUser = process.env.GRAPHENE_BOLT_USER;
-var graphenedbPass = process.env.GRAPHENE_BOLT_PASSWORD;
+var graphenedbUser = process.env.GRAPHENEDB_BOLT_USER;
+var graphenedbPass = process.env.GRAPHENEDB_BOLT_PASSWORD;
 
 var driver = neo4j.driver(graphenedbURL, neo4j.auth.basic(graphenedbUser, graphenedbPass));
 
-var session = driver.session(); 
-/*
+/*var session = driver.session(); 
+
 app.get('/db', function(request, response) {
     session
         .run('MATCH(n:Movie) WHERE n.title=~"B.*" RETURN DISTINCT n LIMIT 25')
