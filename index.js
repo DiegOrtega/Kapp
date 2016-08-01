@@ -25,7 +25,7 @@ var graphenedbPass = process.env.GRAPHENEDB_BOLT_PASSWORD;
 
 var driver = neo4j.driver(graphenedbURL, neo4j.auth.basic(graphenedbUser, graphenedbPass));
 
-/*var session = driver.session(); 
+var session = driver.session(); 
 
 app.get('/db', function(request, response) {
     session
