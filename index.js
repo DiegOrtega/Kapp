@@ -17,13 +17,14 @@ app.use(express.static(__dirname + '/public'));
 
 app.set('port', (process.env.PORT || 5000));
 
-//var driver = neo4j.driver('bolt://localhost', neo4j.auth.basic('neo4j','tractus0'));
+
 
 var graphenedbURL = process.env.GRAPHENEDB_BOLT_URL;
 var graphenedbUser = process.env.GRAPHENEDB_BOLT_USER;
 var graphenedbPass = process.env.GRAPHENEDB_BOLT_PASSWORD;
 
-var driver = neo4j.driver(graphenedbURL, neo4j.auth.basic(graphenedbUser, graphenedbPass));
+//var driver = neo4j.driver(graphenedbURL, neo4j.auth.basic(graphenedbUser, graphenedbPass));
+var driver = neo4j.driver('bolt://localhost' || graphenedbURL, neo4j.auth.basic('neo4j','tractus0'));
 
 var session = driver.session(); 
 /*
