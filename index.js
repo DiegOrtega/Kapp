@@ -26,7 +26,7 @@ var graphenedbPass = process.env.GRAPHENEDB_BOLT_PASSWORD;
 var driver = neo4j.driver(graphenedbURL, neo4j.auth.basic(graphenedbUser, graphenedbPass));
 
 var session = driver.session(); 
-
+/*
 app.get('/db', function(request, response) {
     session
         .run('MATCH(n:Movie) WHERE n.title=~"B.*" RETURN DISTINCT n LIMIT 25')
