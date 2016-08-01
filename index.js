@@ -113,16 +113,16 @@ app.post('/movie/actor/add',function(request, response){
 */
 
 session
-    .run('CREATE (n {hello: "World"}) RETURN n.name) RETURN n.name')
-    .then(function(result){
-        result.records.forEach(function(record){
-            console.log(record)    
-        }); 
-    
+    .run("CREATE (n {hello: 'World'}) RETURN n.name")
+    .then(function(result) {
+        result.records.forEach(function(record) {
+            console.log(record)
+        });
+
         session.close();
     })
-    .catch(function(error)}{
-       console.log(error);    
+    .catch(function(error) {
+        console.log(error);
     });
  
 app.get('/index', function(request, response) {
