@@ -868,6 +868,10 @@ span.right { float: right; }
 
 .large-popup .input-signtype { width: 100%; line-height: 45px; border-radius: 2px; border: none; color: #b4b7c1; padding-left: 15px; margin-bottom: 20px; }
 
+#address { width: 100%; line-height: 45px; border-radius: 2px; border: none; color: #b4b7c1; padding-left: 15px; margin-bottom: 20px; }
+
+#submit { width: 100%; line-height: 45px; border-radius: 2px; border: none; padding-left: 15px; margin-bottom: 20px; }
+
 .large-popup span { line-height: 20px; }
 
 .large-popup-title { color: #FFF; font-size: 20px; line-height: 18px; padding-left: 35px; margin-bottom: 20px; }
@@ -3780,4 +3784,23 @@ body .login-user-down:hover {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+#map {
+    height: 500px;
+    width: 500px;
+}
+
+#floating-panel {
+  position: absolute;
+  top: 10px;
+  left: 25%;
+  z-index: 5;
+  background-color: #fff;
+  padding: 5px;
+  border: 1px solid #999;
+  text-align: center;
+  font-family: 'Roboto','sans-serif';
+  line-height: 30px;
+  padding-left: 10px;
 }

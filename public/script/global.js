@@ -733,3 +733,4 @@ $('.s-color').on('click', function() {
 
 
 });
+

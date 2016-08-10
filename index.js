@@ -21,8 +21,9 @@ var graphenedbURL = process.env.GRAPHENEDB_MAROON_BOLT_URL;
 var graphenedbUser = process.env.GRAPHENEDB_MAROON_BOLT_USER;
 var graphenedbPass = process.env.GRAPHENEDB_MAROON_BOLT_PASSWORD;
 
-var driver = neo4j.driver(graphenedbURL, neo4j.auth.basic(graphenedbUser, graphenedbPass));
-//var driver = neo4j.driver(graphenedbURL || 'bolt://localhost' , neo4j.auth.basic(graphenedbUser, graphenedbPass) || neo4j.auth.basic('neo4j','tractus0'));
+//var driver = neo4j.driver(graphenedbURL, neo4j.auth.basic(graphenedbUser, graphenedbPass));
+
+var driver = neo4j.driver('bolt://localhost' ,neo4j.auth.basic('neo4j','tractus0'));
 
 var session = driver.session(); 
 /*
@@ -110,19 +111,6 @@ app.post('/movie/actor/add',function(request, response){
     });
 });
 */
-
-session
-    .run("CREATE (n {hello: 'World'}) RETURN n.name")
-    .then(function(result) {
-        result.records.forEach(function(record) {
-            console.log(record)
-        });
-
-        session.close();
-    })
-    .catch(function(error) {
-        console.log(error);
-    });
  
 app.get('/index', function(request, response) {
   response.render('pages/index');
@@ -193,6 +181,10 @@ app.get('/pro_llrp', function(request, response) {
   response.render('pages/perfil_Beto');
 });
 
+app.get('/pro_lcl', function(request, response) {
+  response.render('pages/perfil_Francisco');
+});
+
 app.get('/blog', function(request, response) {
   response.render('pages/blog');
 });
@@ -260,7 +252,6 @@ app.get('/statictics', function(request, response) {
 app.get('/work', function(request, response) {
   response.render('pages/work');
 });
-
 
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
