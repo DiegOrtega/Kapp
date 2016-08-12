@@ -124,6 +124,10 @@ app.get('/', function(request, response) {
   response.render('pages/about-us');
 });
 
+app.get('/about-us', function(request, response) {
+  response.render('pages/about-us');
+});
+
 
 app.get('/activity', function(request, response) {
   response.render('pages/activity');
