@@ -103,9 +103,9 @@
 				<p style="font-size:200%;">Sueña. Conecta. Crea.</p>
 
 				<a class="btn color-0 size-1 hover-2" style="border-color:#3b5998; background-color:#3b5998;" href="https://www.facebook.com/tractusmx" target="_blank"><i class="fa fa-facebook"></i>Noticias vía facebook</a>
-                <!--
+                
 				<a class="be-register btn color-0 size-1 hover-9" style="border-color:#FFCC20; color:#FFCC33;" ><i class="fa fa-home" style="color:#FFCC20;"></i>Registro</a>
-                -->
+                
 			</div>	
 		</div>
 		<div class="container">
@@ -803,75 +803,107 @@
 	</div>
     <div class="large-popup register">
 		<div class="large-popup-fixed"></div>
-		<div class="container large-popup-container" >
-			<div class="row" style="width:100%; height:100%;">
-				<div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2 large-popup-content" >
-					<div class="row" style="width:100%; height:100%;">
+		<div class="container large-popup-container" style="min-width:500px; min-height:500px;" >
+			<div class="row" style="min-width:500px; min-height:500px;">
+				<div class="col-md-10 col-md-push-1 col-lg-8 col-lg-push-2 large-popup-content" style="min-width:500px; min-height:500px;" >
+					<div class="row" style="width:100%; height:100%; min-width:500px; min-height:500px;">
 						<div class="col-md-12">
 							<i class="fa fa-times close-button"></i>
 							<h5 class="large-popup-title">Registro</h5>
 						</div> 
-						<form action="./" class="popup-input-search" style="width:100%; height:100%;">
+                        
+                        <!--REGISTRO-->
+                        
+						<form method='post' action='/user/add' class="popup-input-search" style="width:100%; height:100%; min-width:500px; min-height:500px;">
                             <div class="col-md-6">
-                                <input class="input-signtype" type="text" required="" placeholder="Nombre">
+                                <input class="input-signtype" type="text" name="user_name" required="required" placeholder="Nombre">
                             </div>
                             <div class="col-md-6">
-                                <input class="input-signtype" type="text" required="" placeholder="Apellido">
+                                <input class="input-signtype" type="text" name="user_lastName" required="required" placeholder="Apellido">
                             </div>
                             <div class="col-md-6">
-                                <div class="be-custom-select-block">
-                                <select class="be-custom-select">
-                                    <option value="" selected>
-                                        México
-                                    </option>
+                                <div class="be-custom-select-block">     
+                                <select class="be-custom-select" name="user_country" required="required">
+                                    <option value="" disabled selected>País</option>
+                                    <option value="México">México</option>
                                 </select>
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <input class="input-signtype" type="text" required="" placeholder="Email">
+                                <input class="input-signtype" type="text" name="user_email" required="required" placeholder="Email">
                             </div>
                             <div class="col-md-6">
                                 <div class="be-custom-select-block">
-                                <select class="be-custom-select">
-                                    <option value="" disabled selected>
-                                    Género
-                                    </option>
-                                    <option value="">Hombre</option>
-                                    <option value="">Mujer</option>
+                                <select class="be-custom-select" name="user_genre" required="required">
+                                    <option disabled selected>Género</option>
+                                    <option value="Hombre">Hombre</option>
+                                    <option value="Mujer">Mujer</option>
                                 </select>
+                                <!--<input list="genero" class="be-custom-select" name="user_genre" required="required" placeholder="Género">
+                                <datalist id="genero">
+                                <option value="Hombre">
+                                <option value="Mujer">
+                                </datalist> -->         
                                 </div>
                             </div>    
                             <div class="col-md-6">
-                                <input class="input-signtype" type="text" required="" placeholder="Contraseña">
+                                <input id="contraseña" class="input-signtype" type="text" name="user_pass" required="required" placeholder="Contraseña">
                             </div>
                             <div class="col-md-6">
-                                <input class="input-signtype" type="text" required="" placeholder="Confirma Contraseña">
+                                <input id="confirmacion_contraseña" class="input-signtype" type="text" required placeholder="Confirmar Contraseña">
                             </div>
+                            
+                            <div class="col-md-6">
+                            <div class="be-custom-select-block">
+                                <select class="be-custom-select" name="user_age" required="required">
+                                    <option value="" disabled selected>Edad</option>
+                                    <option value="13" >13</option>
+                                    <option value="14" >14</option>
+                                    <option value="15" >15</option>
+                                    <option value="16" >16</option>
+                                    <option value="17" >17</option>
+                                    <option value="18" >18</option>
+                                    <option value="19" >19</option>
+                                    <option value="20" >20</option>
+                                    <option value="21" >21</option>
+                                    <option value="22" >22</option>
+                                    <option value="23" >23</option>
+                                    <option value="24" >24</option>
+                                    <option value="25" >25</option>
+                                    <option value="26" >26</option>
+                                    <option value="27" >27</option>
+                                    <option value="28" >28</option>
+                                    <option value="29" >29</option>
+                                    <option value="30" >30</option>
+                                    <option value="31" >31</option>
+                                    <option value="32" >32</option>
+                                    <option value="33" >33</option>
+                                    <option value="34" >34</option>
+                                    <option value="35" >35</option>
+                                    <option value="36" >36</option>
+                                    <option value="37" >37</option>
+                                    <option value="38" >38</option>
+                                    <option value="39" >39</option>
+                                    <option value="40" >40</option>
+                                    <option value="41" >41</option>
+                                    <option value="42" >42</option>
+                                    <option value="43" >43</option>
+                                    <option value="44" >44</option>
+                                    <option value="45" >45</option>
+                                    <option value="46" >46</option>
+                                    <option value="47" >47</option>
+                                    <option value="48" >48</option>
+                                    <option value="49" >49</option>
+                                    <option value="50" >50</option>
+                                </select>
+                            </div>
+                            </div>    
+                            
+                            <!--
                             <div class="col-md-12 be-date-block">
-                                <span class="large-popup-text">
-                                    Fecha de nacimiento
-                                </span>
-                                <div class="be-custom-select-block mounth">
-                                    <select class="be-custom-select">
-                                        <option value="" disabled selected>
-                                            Mes
-                                        </option>
-                                        <option value="">Enero</option>	
-                                        <option value="">Febrero</option>	
-                                        <option value="">Marzo</option>	
-                                        <option value="">Abril</option>	
-                                        <option value="">Mayo</option>	
-                                        <option value="">Junio</option>	
-                                        <option value="">Julio</option>	
-                                        <option value="">Agosto</option>	
-                                        <option value="">Septiembre</option>	
-                                        <option value="">Octubre</option>	
-                                        <option value="">Noviembre</option>	
-                                        <option value="">Deciembre</option>
-                                    </select>
-                                </div>
+                                <span class="large-popup-text">Fecha de nacimiento</span>
                                 <div class="be-custom-select-block">
-                                    <select class="be-custom-select">
+                                    <select class="be-custom-select" name="user_birthday" required="required">
                                         <option value="" disabled selected>
                                             Día
                                         </option>
@@ -907,7 +939,26 @@
                                         <option value="">30</option>
                                     </select>
                                 </div>
-                                <div class="be-custom-select-block">
+                                <div class="be-custom-select-block mounth">
+                                    <select class="be-custom-select" name="user_birthmonth" required="required">
+                                        <option value="" disabled selected>
+                                            Mes
+                                        </option>
+                                        <option value="">Enero</option>	
+                                        <option value="">Febrero</option>	
+                                        <option value="">Marzo</option>	
+                                        <option value="">Abril</option>	
+                                        <option value="">Mayo</option>	
+                                        <option value="">Junio</option>	
+                                        <option value="">Julio</option>	
+                                        <option value="">Agosto</option>	
+                                        <option value="">Septiembre</option>	
+                                        <option value="">Octubre</option>	
+                                        <option value="">Noviembre</option>	
+                                        <option value="">Deciembre</option>
+                                    </select>
+                                </div>
+                                <div class="be-custom-select-block" name="user_birthyear" required="required">
                                     <select class="be-custom-select">
                                         <option value="" disabled selected>
                                             Año
@@ -969,16 +1020,13 @@
                                     </select>
                                 </div>
                             </div>
-
-                            <div class="col-md-6">
-                                <input id="address" type="textbox" value="México">
-                                <input id="submit" type="button" value="Geocode">
-                            </div>
-                            <div id="map" ></div>      
+                            -->
+                        
+                            <!--<iframe src="mapa" height="500px" width="100%"></iframe>-->
                             <div class="col-md-6">
                                 <div class="be-checkbox">
                                     <label class="check-box">
-                                        <input class="checkbox-input" type="checkbox" required="" value="" > <span class="check-box-sign"></span>
+                                        <input class="checkbox-input" type="checkbox" required="required" value="" > <span class="check-box-sign"></span>
                                     </label>
                                     <span class="large-popup-text">
                                         He leído y acepto los <a class="be-popup-terms" href="">Terminos de uso</a> y la <a class="be-popup-terms" href="">Política de Privacidad</a>.
@@ -986,7 +1034,7 @@
                                 </div>
                                 <div class="be-checkbox">
                                     <label class="check-box">
-                                        <input class="checkbox-input" type="checkbox" value="" > <span class="check-box-sign"></span>
+                                        <input class="checkbox-input" type="checkbox" required="required" value="" checked> <span class="check-box-sign"></span>
                                     </label>
                                     <span class="large-popup-text">
                                         Quiero recibir noticias
@@ -1022,7 +1070,7 @@
      <div class="open"><img src="img/icon-134.png" alt=""></div>
   </div>
   -->
+        <% include ../partials/footer.ejs %>    
 	</body>
-    <% include ../partials/footer.ejs %>
       
 </html>

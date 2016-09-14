@@ -21,9 +21,9 @@ var graphenedbURL = process.env.GRAPHENEDB_MAROON_BOLT_URL;
 var graphenedbUser = process.env.GRAPHENEDB_MAROON_BOLT_USER;
 var graphenedbPass = process.env.GRAPHENEDB_MAROON_BOLT_PASSWORD;
 
-//var driver = neo4j.driver(graphenedbURL, neo4j.auth.basic(graphenedbUser, graphenedbPass));
+var driver = neo4j.driver(graphenedbURL, neo4j.auth.basic(graphenedbUser, graphenedbPass));
 
-var driver = neo4j.driver('bolt://localhost' ,neo4j.auth.basic('neo4j','tractus0'));
+//var driver = neo4j.driver('bolt://localhost' ,neo4j.auth.basic('neo4j','tractus0'));
 
 var session = driver.session(); 
 /*
@@ -63,54 +63,33 @@ app.get('/db', function(request, response) {
             console.log(err);
     });
 });
-
-app.post('/movie/add',function(request, response){
-   var movie_title = request.body.movie_title;   
-   var movie_year = request.body.movie_year;
-   
-    session
-        .run('CREATE (n:Movie {title:{titleParam}, year:{yearParam}})', {titleParam:movie_title, yearParam:movie_year})
-        .then(function(result){
-        response.redirect('/db');
-    
-        session.close;
-    })
-        .catch(function(err){
-        console.log(err);
-    });
-});
-
-app.post('/actor/add',function(request, response){
-   var name = request.body.name;   
-   
-    session
-        .run('CREATE (n:Person {name:{nameParam}})', {nameParam:name})
-        .then(function(result){
-        response.redirect('/db');
-    
-        session.close;
-    })
-        .catch(function(err){
-        console.log(err);
-    });
-});
-
-app.post('/movie/actor/add',function(request, response){
-   var name = request.body.name;
-   var movie_title = request.body.movie_title;    
-   
-    session
-        .run('MERGE (n:Person {name:{nameParam}})-[:ACTED_IN]->(m:Movie {title:{titleParam}})', {nameParam:name, titleParam: movie_title})
-        .then(function(result){
-        response.redirect('/db');
-    
-        session.close;
-    })
-        .catch(function(err){
-        console.log(err);
-    });
-});
 */
+
+app.post('/user/add',function(request, response){
+   var nombre = request.body.user_name;   
+   var apellido = request.body.user_lastName;
+   var pais = request.body.user_country;
+   var email = request.body.user_email;
+   var genero = request.body.user_genre; 
+   var contraseña = request.body.user_pass; 
+   var edad = request.body.user_age;    
+   /*var dia_nacimiento = request.body.user_birthday;
+   var mes_nacimiento = request.body.user_birthmonth;
+   var año_nacimiento = request.body.user_birthyear;
+   var nacimiento = [dia_nacimiento,mes_nacimiento,año_nacimiento];*/
+    
+    session
+        .run('CREATE (n:usuario {nombre:{nombreParam}, apellido:{apellidoParam}, pais:{paisParam}, email:{emailParam}, genero:{generoParam}, constraseña:{contraseñaParam}, edad:{edadParam} })', {nombreParam:nombre, apellidoParam:apellido, paisParam:pais, emailParam:email, generoParam:genero, contraseñaParam:contraseña, edadParam:edad})
+        .then(function(result){
+        response.redirect('/registro-exitoso');
+    
+        session.close;
+    })
+        .catch(function(err){
+        console.log(err);
+    });
+});
+
  
 app.get('/index', function(request, response) {
   response.render('pages/index');
@@ -255,6 +234,14 @@ app.get('/statictics', function(request, response) {
 
 app.get('/work', function(request, response) {
   response.render('pages/work');
+});
+
+app.get('/mapa', function(request, response) {
+  response.render('pages/mapa');
+});
+
+app.get("/registro-exitoso", function(request, response){
+    response.render("pages/registro-exitoso");
 });
 
 app.listen(app.get('port'), function() {
