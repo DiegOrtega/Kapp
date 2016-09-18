@@ -22,9 +22,9 @@ var graphenedbURL = process.env.GRAPHENEDB_MAROON_BOLT_URL;
 var graphenedbUser = process.env.GRAPHENEDB_MAROON_BOLT_USER;
 var graphenedbPass = process.env.GRAPHENEDB_MAROON_BOLT_PASSWORD;
 
-//var driver = neo4j.driver(graphenedbURL, neo4j.auth.basic(graphenedbUser, graphenedbPass));
+var driver = neo4j.driver(graphenedbURL, neo4j.auth.basic(graphenedbUser, graphenedbPass));
 
-var driver = neo4j.driver('bolt://localhost' ,neo4j.auth.basic('neo4j','tractus0'));
+//var driver = neo4j.driver('bolt://localhost' ,neo4j.auth.basic('neo4j','tractus0'));
 
 var session = driver.session(); 
 /*
