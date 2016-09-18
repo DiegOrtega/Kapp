@@ -3811,3 +3811,12 @@ html, body {
   border-radius: 2px;
   border: none;
 }
+
+.aviso{
+    font-size: 12px;
+    line-height: 20px; 
+    font-weight: 400; 
+    color: #b4b7c1; 
+    text-align: center;
+    margin-bottom: 10px;
+}

@@ -3,6 +3,7 @@ var path = require('path');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
 var neo4j = require('neo4j-driver').v1;
+var validator = require('validator'); 
 
 var app = express();
 
@@ -21,9 +22,9 @@ var graphenedbURL = process.env.GRAPHENEDB_MAROON_BOLT_URL;
 var graphenedbUser = process.env.GRAPHENEDB_MAROON_BOLT_USER;
 var graphenedbPass = process.env.GRAPHENEDB_MAROON_BOLT_PASSWORD;
 
-var driver = neo4j.driver(graphenedbURL, neo4j.auth.basic(graphenedbUser, graphenedbPass));
+//var driver = neo4j.driver(graphenedbURL, neo4j.auth.basic(graphenedbUser, graphenedbPass));
 
-//var driver = neo4j.driver('bolt://localhost' ,neo4j.auth.basic('neo4j','tractus0'));
+var driver = neo4j.driver('bolt://localhost' ,neo4j.auth.basic('neo4j','tractus0'));
 
 var session = driver.session(); 
 /*
@@ -73,16 +74,21 @@ app.post('/user/add',function(request, response){
    var genero = request.body.user_genre; 
    var contraseña = request.body.user_pass; 
    var edad = request.body.user_age;    
+   var noticias = request.body.user_noticias;  
+    
+    if(noticias != "Si"){
+        noticias = "No"
+    };
+   //var checkboxes= $("input[name='chk[]']:checked").length > 1;    
    /*var dia_nacimiento = request.body.user_birthday;
    var mes_nacimiento = request.body.user_birthmonth;
    var año_nacimiento = request.body.user_birthyear;
    var nacimiento = [dia_nacimiento,mes_nacimiento,año_nacimiento];*/
     
     session
-        .run('CREATE (n:usuario {nombre:{nombreParam}, apellido:{apellidoParam}, pais:{paisParam}, email:{emailParam}, genero:{generoParam}, constraseña:{contraseñaParam}, edad:{edadParam} })', {nombreParam:nombre, apellidoParam:apellido, paisParam:pais, emailParam:email, generoParam:genero, contraseñaParam:contraseña, edadParam:edad})
+        .run('CREATE (n:usuario {nombre:{nombreParam}, apellido:{apellidoParam}, pais:{paisParam}, email:{emailParam}, genero:{generoParam}, constraseña:{contraseñaParam}, edad:{edadParam}, noticias:{noticiasParam} })', {nombreParam:nombre, apellidoParam:apellido, paisParam:pais, emailParam:email, generoParam:genero, contraseñaParam:contraseña, edadParam:edad, noticiasParam:noticias})
         .then(function(result){
-        response.redirect('/registro-exitoso');
-    
+        response.redirect('/home');
         session.close;
     })
         .catch(function(err){
@@ -93,6 +99,10 @@ app.post('/user/add',function(request, response){
  
 app.get('/index', function(request, response) {
   response.render('pages/index');
+});
+
+app.get('/home', function(request, response) {
+  response.render('pages/home');
 });
 
 app.get('/registro', function(request, response) {
