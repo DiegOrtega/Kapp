@@ -71,7 +71,7 @@ app.get('/db', function(request, response) {
 
 //Se llama index.js donde se ubican todos los procesos relacionados al despliegue de esta página
 
-app.use(require('./rutas/index'));
+app.use(require('./rutas/home'));
 
 //Todas las demas rutas aún no han sido modularizadas
 app.get('/home', function(request, response) {    
