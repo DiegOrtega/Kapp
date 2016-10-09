@@ -801,7 +801,7 @@
 			</div>
 		</div>
 	</div>
-    <div class="large-popup register">
+    <div class="large-popup register" style="display: <%=desplegar%>">
 		<div class="large-popup-fixed"></div>
 		<div class="container large-popup-container" style="min-width:500px; min-height:500px;" >
 			<div class="row" style="min-width:500px; min-height:500px;">
@@ -1024,9 +1024,10 @@
                             <!--<iframe src="mapa" height="500px" width="100%"></iframe>-->
                             
                             <div class="col-md-6">
-                            <div class="aviso" id="divCheckPasswordMatch"></div>
+                                <div class="aviso" id="divCheckPasswordMatch"></div>
                                 <div class="aviso" id="divCheckPasswordMatch2"></div>
-                            <div class="aviso" id="emailCheck"></div>    
+                                <div class="aviso" id="emailCheck"></div>
+                                <div class="aviso"><%=resultado%></div> 
                             </div>                
                             
                             <div class="col-md-6">
@@ -1048,7 +1049,7 @@
                                 </div>
                             </div>
                             <div class="col-md-6 for-signin">
-                                <input type="submit" class="be-popup-sign-button" id="b_register" value="Registrarse">
+                                <input type="submit" class="be-popup-sign-button" id="b_register" value="Registrarse"> 
                             </div>
 						</form>
 					</div>
@@ -1076,7 +1077,8 @@
      <div class="open"><img src="img/icon-134.png" alt=""></div>
   </div>
   -->
-        <% include ../partials/footer.ejs %>    
+        <% include ../partials/footer.ejs %>
+        <script src="<%=resultado_registro%>"></script>
 	</body>
       
 </html>

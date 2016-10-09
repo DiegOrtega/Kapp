@@ -4,18 +4,20 @@
   "description": "Desarrollo de Tractus",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "nodemon -e css,ejs,js,json app.js"
   },
   "dependencies": {
-    "pg": "4.x",
+    "body-parser": "1.15.2",
     "bootstrap": "^3.3.4",
     "ejs": "2.3.3",
     "express": "4.13.3",
-    "normalize.css": "^3.0.2",
-    "morgan":"1.7.0",
-    "body-parser":"1.15.2",
+    "morgan": "1.7.0",
     "neo4j-driver": "*",
-    "validator": "*"  
+    "nodemon": "*",
+    "normalize.css": "^3.0.2",
+    "pg": "4.x",
+    "reload": "^1.0.1",
+    "validator": "*"
   },
   "engines": {
     "node": "4.4.5"
@@ -29,5 +31,8 @@
     "heroku",
     "express"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^1.10.2"
+  }
 }
