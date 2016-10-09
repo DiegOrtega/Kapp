@@ -8,10 +8,10 @@ var checkMail= "none";
 var resultado_registro ="";
 
 //Protocolo de conexión para servidor cloud heroku
-//var driver = neo4j.driver(graphenedbURL, neo4j.auth.basic(graphenedbUser, graphenedbPass));
+var driver = neo4j.driver(graphenedbURL, neo4j.auth.basic(graphenedbUser, graphenedbPass));
 
 //Protocolo de conexión para servidor local
-var driver = neo4j.driver('bolt://localhost' ,neo4j.auth.basic('neo4j','tractus0'));
+//var driver = neo4j.driver('bolt://localhost' , neo4j.auth.basic('neo4j','tractus0'));
 
 //Se declara la variable session para hacer consultas en la base de datos
 var session = driver.session(); 
