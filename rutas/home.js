@@ -7,6 +7,11 @@ var resultado ="";
 var checkMail= "none";
 var resultado_registro ="";
 
+//Conexión con base de datos remota
+var graphenedbURL = process.env.GRAPHENEDB_MAROON_BOLT_URL;
+var graphenedbUser = process.env.GRAPHENEDB_MAROON_BOLT_USER;
+var graphenedbPass = process.env.GRAPHENEDB_MAROON_BOLT_PASSWORD;
+
 //Protocolo de conexión para servidor cloud heroku
 var driver = neo4j.driver(graphenedbURL, neo4j.auth.basic(graphenedbUser, graphenedbPass));
 

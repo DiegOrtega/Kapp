@@ -24,12 +24,6 @@ app.use(express.static(__dirname + '/public'));
 //se setea el puerto donde se correra el sitio web, process localiza el puerto donde debe correr cuando se sube la página al servidor cloud de heroku
 app.set('port', (process.env.PORT || 5000));
 
-//Conexión con base de datos remota
-var graphenedbURL = process.env.GRAPHENEDB_MAROON_BOLT_URL;
-var graphenedbUser = process.env.GRAPHENEDB_MAROON_BOLT_USER;
-var graphenedbPass = process.env.GRAPHENEDB_MAROON_BOLT_PASSWORD;
-
-
 /*
 app.get('/db', function(request, response) {
     session
