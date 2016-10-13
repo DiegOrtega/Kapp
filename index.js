@@ -217,6 +217,8 @@ var server = app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
 
+server.timeout = 200000;
+
 //Este código es para utilizar paquete reload, aún no funciona
 //reload(server, app);
 
