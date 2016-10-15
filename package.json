@@ -17,7 +17,8 @@
     "normalize.css": "^3.0.2",
     "pg": "4.x",
     "reload": "^1.0.1",
-    "validator": "*"
+    "validator": "*", 
+    "termhelper": "0.2.4"  
   },
   "engines": {
     "node": "4.4.5"

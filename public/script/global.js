@@ -734,3 +734,63 @@ $('.s-color').on('click', function() {
 
 });
 
+function addLoadEvent(func) {
+    if(typeof window.onload != 'function') {
+        window.onload = func;
+    }
+    else {
+        if(func) {
+            var oldLoad = window.onload;
+
+            window.onload = function() {
+                if(oldLoad)
+                        oldLoad();
+
+                func();
+            }
+        }
+    }
+};
+
+// The setCaretPosition function belongs right here!
+
+
+function setCaretPosition(nombre_input, caretPos) {
+    var elem = document.getElementById("nombre_input");
+
+    if(elem != null) {
+        if(elem.createTextRange) {
+            var range = elem.createTextRange();
+            range.move('character', caretPos);
+            range.select();
+        }
+        else {
+            if(elem.selectionStart) {
+                elem.focus();
+                elem.setSelectionRange(caretPos, caretPos);
+            }
+            else
+                elem.focus();
+        }
+    }
+}
+
+
+function setTextAreasOnFocus() {
+/***
+ * This function will force the cursor to be positioned
+ * at the end of all textareas when they receive focus.
+ */
+    var textAreas = document.getElementsByTagName('textarea');
+
+    for(var i = 0; i < textAreas.length; i++) {
+        textAreas[i].onfocus = function() {
+            setCaretPosition(this.id, this.value.length);
+        }
+    }
+
+    textAreas = null;
+}
+
+addLoadEvent(setTextAreasOnFocus);
+
