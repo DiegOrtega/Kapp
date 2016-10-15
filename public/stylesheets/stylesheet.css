@@ -3486,7 +3486,7 @@ input:focus {
 .body-color2 .noto-count, .body-color2 .header-menu > li > ul li:hover, .body-color2 .creative_filds_block a:hover, .body-color2 .creative_filds_block .nav > li > a:hover, .body-color2 .creative_filds_block .nav > li.active > a,
 .body-color2 .tags_block li a:hover, .body-color2 .tags_block li a.active, .body-color2 .filter-block > ul > li:hover, .body-color2 .filter-block li.be-active, .body-color2 .portfolio-link .color_bg,
 .body-color2 .be-popup, .body-color2 .be-drop-down.color-3:hover, .body-color2 .be-drop-down.color-4,  .body-color2 .drop-down-list a:hover, .body-color2 ul.soc_buttons > li:hover, .body-color2 .soc_buttons.light > li:hover, .body-color2 .submit-block,
-.body-color2 .close-button, .body-color2 .message-popup .fa.close-button, .body-color2 .close-button:hover, .body-color2 .be-popup-sign-button, .body-color2 .be-popup-sign-button:hover,
+.body-color2 .close-button, .body-color2 .message-popup .fa.close-button, .body-color2 .close-button:hover,/* .body-color2 .be-popup-sign-button, .body-color2 .be-popup-sign-button:hover,*/
 .body-color2 .be-follow-type, .body-color2 .be-follow-type:hover, .body-color2 .be-user-counter, .body-color2 .be-button-vidget.blue-style, .body-color2 .be-button-vidget.blue-style:hover,
 .body-color2 .be-button-showing:hover, .body-color2 .be-button-showing, .body-color2 .swiper-active-switch, .body-color2 .subblock .type-1:hover,
 .body-color2 .btn.color-1, .body-color2 .btn.hover-9:hover, .body-color2 .btn.hover-9.active, .body-color2 .form-group.color-4 .form-input, .body-color2 .form-checkbox.style-2 > input:checked + .check:before,
@@ -3521,7 +3521,7 @@ input:focus {
 .body-color3 .tags_block li a:hover, .body-color3 .tags_block li a.active, .body-color3 .filter-block > ul > li:hover, .body-color3 .filter-block li.be-active, .body-color3 .portfolio-link .color_bg,
 .body-color3 .be-popup, .body-color3 .be-drop-down.color-3:hover, .body-color3 .be-drop-down.color-4,
 .body-color3 .drop-down-list a:hover, .body-color3 ul.soc_buttons > li:hover, .body-color3 .soc_buttons.light > li:hover, .body-color3 .submit-block,
-.body-color3 .close-button, .body-color3 .message-popup .fa.close-button, .body-color3 .close-button:hover, .body-color3 .be-popup-sign-button, .body-color3 .be-popup-sign-button:hover,
+.body-color3 .close-button, .body-color3 .message-popup .fa.close-button, .body-color3 .close-button:hover, /*.body-color3 .be-popup-sign-button, .body-color3 .be-popup-sign-button:hover,*/
 .body-color3 .be-follow-type, .body-color3 .be-follow-type:hover, .body-color3 .be-user-counter, .body-color3 .be-button-vidget.blue-style, .body-color3 .be-button-vidget.blue-style:hover,
 .body-color3 .be-button-showing:hover, .body-color3 .be-button-showing, .body-color3 .swiper-active-switch, .body-color3 .subblock .type-1:hover,
 .body-color3 .btn.color-1, .body-color3 .btn.hover-9:hover, .body-color3 .btn.hover-9.active, .body-color3 .form-group.color-4 .form-input, .body-color3 .form-checkbox.style-2 > input:checked + .check:before,
@@ -3565,7 +3565,7 @@ input:focus {
 .body-color4 .noto-count, .body-color4 .header-menu > li > ul li:hover, .body-color4 .creative_filds_block a:hover, .body-color4 .creative_filds_block .nav > li > a:hover, .body-color4 .creative_filds_block .nav > li.active > a,
 .body-color4 .tags_block li a:hover, .body-color4 .tags_block li a.active, .body-color4 .filter-block > ul > li:hover, .body-color4 .filter-block li.be-active, .body-color4 .portfolio-link .color_bg,
 .body-color4 .be-popup, .body-color4 .be-drop-down.color-3:hover, .body-color4 .be-drop-down.color-4,  .body-color4 .drop-down-list a:hover, .body-color4 ul.soc_buttons > li:hover, .body-color4 .soc_buttons.light > li:hover, .body-color4 .submit-block,
-.body-color4 .close-button, .body-color4 .message-popup .fa.close-button, .body-color4 .close-button:hover, .body-color4 .be-popup-sign-button, .body-color4 .be-popup-sign-button:hover,
+.body-color4 .close-button, .body-color4 .message-popup .fa.close-button, .body-color4 .close-button:hover, /*.body-color4 .be-popup-sign-button, .body-color4 .be-popup-sign-button:hover,*/
 .body-color4 .be-follow-type, .body-color4 .be-follow-type:hover, .body-color4 .be-user-counter, .body-color4 .be-button-vidget.blue-style, .body-color4 .be-button-vidget.blue-style:hover,
 .body-color4 .be-button-showing:hover, .body-color4 .be-button-showing, .body-color4 .swiper-active-switch, .body-color4 .subblock .type-1:hover,
 .body-color4 .btn.color-1, .body-color4 .btn.hover-9:hover, .body-color4 .btn.hover-9.active, .body-color4 .form-group.color-4 .form-input, .body-color4 .form-checkbox.style-2 > input:checked + .check:before,
