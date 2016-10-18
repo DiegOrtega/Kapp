@@ -3,7 +3,6 @@ var input = document.forms["form_register"];
 var v0 = input.elements[0].value, v1 = input.elements[1].value, v2 = input.elements[2].value, v3 = input.elements[3].value, v4 = input.elements[4].value, v5 = input.elements[5].value, v6 = input.elements[6].value, v7 = input.elements[7].value;
 
 document.getElementById("b_register").style.background="gray";
-document.getElementById("b_register").style.backgroundColor="gray";
 document.getElementById("b_register").style.color="black";
 
 function checkPasswordMatch() {
@@ -56,6 +55,8 @@ function checkPasswordMatch() {
         
     }else{
         document.getElementById("b_register").disabled=true;
+        document.getElementById("b_register").style.background="gray";
+        document.getElementById("b_register").style.color="black";
         console.log("falta llenar valores");
     };
     
