@@ -81,6 +81,10 @@ router.get('/', function(request, response) {
       desplegar: checkMail,
       resultado_registro: resultado_registro
   });
+    checkMail = "none";
+    resultado: "";
+    console.log=(checkMail);
 });
+
 
 module.exports = router;
