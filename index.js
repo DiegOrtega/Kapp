@@ -221,7 +221,4 @@ var server = app.listen(app.get('port'), function() {
 
 server.timeout = 200000;
 
-//Este código es para utilizar paquete reload, aún no funciona
-//reload(server, app);
-
 
