@@ -13,10 +13,10 @@ var graphenedbUser = process.env.GRAPHENEDB_MAROON_BOLT_USER;
 var graphenedbPass = process.env.GRAPHENEDB_MAROON_BOLT_PASSWORD;
 
 //Protocolo de conexión para servidor cloud heroku
-var driver = neo4j.driver(graphenedbURL, neo4j.auth.basic(graphenedbUser, graphenedbPass));
+//var driver = neo4j.driver(graphenedbURL, neo4j.auth.basic(graphenedbUser, graphenedbPass));
 
 //Protocolo de conexión para servidor local
-//var driver = neo4j.driver(('bolt://localhost' || graphenedbURL ) , neo4j.auth.basic(('neo4j' || graphenedbUser),('tractus0' || graphenedbPass)));
+var driver = neo4j.driver(('bolt://localhost' || graphenedbURL ) , neo4j.auth.basic(('neo4j' || graphenedbUser),('tractus0' || graphenedbPass)));
 
 //Se declara la variable session para hacer consultas en la base de datos
 var session = driver.session(); 
@@ -43,7 +43,7 @@ router.post('/user/add',function(request, response){
         .run('MATCH (n:usuario {email:{emailParam}}) RETURN n.email AS email', {emailParam:email})
     
         .then(function(result){ 
-            console.log(result.records[0]); 
+            //console.log(result.records[0]); 
             //var emailCheck = result.records[0].get("email");
         
             if(result.records[0] != undefined){
@@ -81,8 +81,9 @@ router.get('/', function(request, response) {
       desplegar: checkMail,
       resultado_registro: resultado_registro
   });
-    checkMail = "none";
-    resultado: "";
+    checkMail= "none";
+    resultado= "";
+    resultado_registro="";
     //console.log=(checkMail);
 });
 

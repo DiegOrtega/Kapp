@@ -18,7 +18,8 @@
     "pg": "4.x",
     "reload": "^1.0.1",
     "validator": "*", 
-    "termhelper": "0.2.4"  
+    "termhelper": "0.2.4",
+    "connect-timeout": "*"  
   },
   "engines": {
     "node": "4.4.5"

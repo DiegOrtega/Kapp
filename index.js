@@ -5,6 +5,7 @@ var bodyParser = require('body-parser');
 var neo4j = require('neo4j-driver').v1;
 var validator = require('validator'); 
 var reload = require('reload');
+var timeout = require('connect-timeout'); //express v4
 //var term = require('termhelper');
 
 
@@ -219,6 +220,9 @@ var server = app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
 
-server.timeout = 200000;
+app.use(timeout(120000));
+app.use(haltOnTimedout);
 
-
+function haltOnTimedout(req, res, next){
+  if (!req.timedout) next();
+}
